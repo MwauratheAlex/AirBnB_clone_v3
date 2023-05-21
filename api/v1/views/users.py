@@ -47,7 +47,6 @@ def post_user():
         abort(400, "Missing email")
     if data.get("password") is None:
         abort(400, "Missing password")
-    
 
     user = User(**data)
     user.save()
